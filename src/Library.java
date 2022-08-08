@@ -10,7 +10,7 @@ public class Library {
     public int getAmount() {
         return amount;
     }
-    // Добавление книги
+    // Р”РѕР±Р°РІР»РµРЅРёРµ РєРЅРёРіРё
 
     public void addBook(Book book) {
         for (int i = 0; i < arrayBook.length; i++) {
@@ -23,7 +23,7 @@ public class Library {
         arrayBook = allocate(arrayBook);
         addBook(book);
     }
-    // Выделение пвмяти (содание нового массива и копирование старого)
+    // Р’С‹РґРµР»РµРЅРёРµ РїРІРјСЏС‚Рё (СЃРѕРґР°РЅРёРµ РЅРѕРІРѕРіРѕ РјР°СЃСЃРёРІР° Рё РєРѕРїРёСЂРѕРІР°РЅРёРµ СЃС‚Р°СЂРѕРіРѕ)
 
     private Book[] allocate(Book[] arrayBook) {
         int newLength = (int) (arrayBook.length * 1.5);
@@ -31,7 +31,7 @@ public class Library {
         System.arraycopy(arrayBook, 0, tmp, 0, arrayBook.length);
         return tmp;
     }
-    // Удаление книги
+    // РЈРґР°Р»РµРЅРёРµ РєРЅРёРіРё
 
     public void removeBook(String nameBook) {
         for (int i = 0; i < arrayBook.length; i++) {
@@ -41,9 +41,9 @@ public class Library {
                 return;
             }
         }
-        System.out.println("В библиотеки нет такой книги");
+        System.out.println("Р’ Р±РёР±Р»РёРѕС‚РµРєРё РЅРµС‚ С‚Р°РєРѕР№ РєРЅРёРіРё");
     }
-    // Печать библиотеки
+    // РџРµС‡Р°С‚СЊ Р±РёР±Р»РёРѕС‚РµРєРё
 
     public void printLibrary() {
         for (Book book : arrayBook) {
@@ -52,7 +52,7 @@ public class Library {
             }
         }
     }
-    // Поиск книги
+    // РџРѕРёСЃРє РєРЅРёРіРё
 
     private Book findBook(Book book) {
         for (Book elem : arrayBook) {
@@ -62,7 +62,7 @@ public class Library {
         }
         return null;
     }
-    // Поиск книги по названю
+    // РџРѕРёСЃРє РєРЅРёРіРё РїРѕ РЅР°Р·РІР°РЅСЋ
 
     public void infoBook(String nameBook) {
         for (Book book : arrayBook) {
@@ -71,9 +71,9 @@ public class Library {
                 return;
             }
         }
-        System.out.println("В библиотеки нет такой книги");
+        System.out.println("Р’ Р±РёР±Р»РёРѕС‚РµРєРё РЅРµС‚ С‚Р°РєРѕР№ РєРЅРёРіРё");
     }
-    // Установка нового года рубликации по названию
+    // РЈСЃС‚Р°РЅРѕРІРєР° РЅРѕРІРѕРіРѕ РіРѕРґР° СЂСѓР±Р»РёРєР°С†РёРё РїРѕ РЅР°Р·РІР°РЅРёСЋ
 
     public void setPublisherYear(String name, int year) {
         for (Book book : arrayBook) {
